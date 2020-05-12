@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Game</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.js"
+        integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous" defer></script>
+    <script src="js/app.js" defer></script>
+</head>
+
+<body>
+    <section class="title">
+        <h1 class="title__heading">Color Game</h1>
+        <p class="title__instruction">The famous "Stroop Effect" is named after J. Ridley Stroop who discovered this
+            strange
+            phenomenon in the 1930s. Here is your job: click the color tiles of the following words. Do NOT read the
+            color of the words...rather, read the words. For example, if the word "blue" is printed in a red color, you
+            should click "blue". Click the colors as fast as you can. It is not as easy as you might think!</p>
+    </section>
+    <nav class="nav">
+        <h2 class="nav__round">Round: </h2>
+        <h2 class="nav__time">Time: </h2>
+        <h2 class="nav__score">Score: </h2>
+        <button class="nav__start">start</button>
+    </nav>
+    <section class="display">
+        <span class="display__word"></span>
+    </section>
+    <section class="tiles">
+        <div class="tiles__red"></div>
+        <div class="tiles__yellow"></div>
+        <div class="tiles__blue"></div>
+        <div class="tiles__purple"></div>
+        <div class="tiles__orange"></div>
+        <div class="tiles__green"></div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+}
+
+.title__heading {
+    font-size: 80px;
+}
+
+.title__instruction {
+    width: 800px;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+nav {
+    width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 10px;
+}
+
+.nav__start {
+    height: 40px;
+    width: 130px;
+    font-size: 25px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.display {
+    width: 800px;
+    height: 400px;
+    margin: 0 auto;
+    font-size: 200px;
+    font-weight: 900;
+    border: solid 5px black;
+    line-height: 400px;
+    text-align: center;
+    background-color: #3f3f3f;
+}
+
+.tiles {
+    width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.tiles div {
+    width: 200px;
+    height: 100px;
+    margin: 30px 30px 0 30px;
+    border: solid 3px black;
+    font-size: 40px;
+    line-height: 100px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.tiles__red {
+    background-color: red;
+}
+
+.tiles__yellow {
+    background-color: yellow;
+}
+
+.tiles__blue {
+    background-color: blue;
+}
+
+.tiles__purple {
+    background-color: purple;
+}
+
+.tiles__orange {
+    background-color: orange;
+}
+
+.tiles__green {
+    background-color: green;
+}

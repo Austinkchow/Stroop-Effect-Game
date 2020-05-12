@@ -14,9 +14,10 @@ Instruction: Player needs to match the color correlate with the word.
 create a array with color words.
 create a array with colors.
 randomized both word and color.
+answer buttons have a class, so it can compare the color. 
 change html's word and css style when the answer button is click.
 
-answer buttons have a class, so it can compare the color. 
+
 
 
 
@@ -26,6 +27,6 @@ answer buttons have a class, so it can compare the color.
 extra:
 3 rounds
 1st round: words with black font color, 1 points for each right answer.
-with different font color, 2 points for each right answer.
+2nd round words with different font color, 2 points for each right answer.
 3rd round: words with different font color and background color, 3 points for each right answer.
 
