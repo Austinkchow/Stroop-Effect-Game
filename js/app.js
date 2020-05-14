@@ -1,5 +1,5 @@
 const game = {
-    time: 5,
+    time: 10,
     points: 0,
     rounds: 1,
     words: ['red', 'yellow', 'blue', 'green', 'orange', 'purple', 'black'],
@@ -10,9 +10,78 @@ const game = {
     gameover: $('#gameover span'),
     interval: null
 }
+const levelIntro = function () {
+    if (game.rounds === 1) {
+        $('.title').css("display", "none");
+        $('.round1').css("display", "block");
+    } else if (game.rounds === 2) {
+        $('.nav,.display,.tiles,.round1').css("display", "none");
+        $('.round2').css("display", "block");
+    } else if (game.rounds === 3) {
+        $('.nav,.display,.tiles,.round2').css("display", "none");
+        $('.round3').css("display", "block");
+    }
+    const threeSec = setTimeout(level, 2000);
+}
+const level = function () {
+    if (game.rounds === 1) {
+        $('.round1').css("display", "none");
+    } else if (game.rounds === 2) {
+        $('.round2').css("display", "none");
+    } else if (game.rounds === 3) {
+        $('.round3').css("display", "none");
+    }
+    $(".nav,.display,.tiles").css("display", "flex");
+    $(".nav__start").css("display", "none");
+    updateCountdown();
+    generateWord();
+    game.interval = setInterval(updateCountdown, 1000);
+}
+
+/* const level1Intro = function () {
+    $('.title').css("display", "none");
+    $('.round1').css("display", "block");
+    const threeSec = setTimeout(level1, 2000);
+}
+
+const level1 = function () {
+    $(".nav,.display,.tiles").css("display", "flex");
+    $(".nav__start").css("display", "none");
+    updateCountdown();
+    generateWord();
+    game.interval = setInterval(updateCountdown, 1000);
+}
+
+const level2Intro = function () {
+    $('.nav,.display,.tiles,.round1').css("display", "none");
+    $('.round2').css("display", "block");
+    const threeSec = setTimeout(level2, 2000);
+}
+
+const level2 = function () {
+    $(".nav,.display,.tiles").css("display", "flex");
+    $(".nav__start").css("display", "none");
+    updateCountdown();
+    generateWord();
+    game.interval = setInterval(updateCountdown, 1000);
+}
+
+const level3Intro = function () {
+    $('.nav,.display,.tiles,.round2').css("display", "none");
+    $('.round3').css("display", "block");
+    const threeSec = setTimeout(level2, 2000);
+}
+
+const level3 = function () {
+    $(".nav,.display,.tiles").css("display", "flex");
+    $(".nav__start").css("display", "none");
+    updateCountdown();
+    generateWord();
+    game.interval = setInterval(updateCountdown, 1000);
+} */
 
 //generate word
-let generateWord = function () {
+const generateWord = function () {
     if (game.rounds === 1) {
         textChange();
     } else if (game.rounds === 2) {
@@ -101,6 +170,38 @@ const updateCountdown = function () {
     game.level.text(`Round: ${game.rounds}`)
     if (game.time === 0) {
         game.rounds++;
+        levelIntro();
+        game.time = 10;
+        if (game.rounds === 4) {
+            gameover();
+        }
+        clearInterval(game.interval);
+    }
+    game.time--;
+}
+/* const updateCountdown = function () {
+    game.countdown.text(`${game.time}`);
+    game.level.text(`Round: ${game.rounds}`)
+    if (game.time === 0) {
+        game.rounds++;
+        if (game.rounds === 2) {
+            level2Intro();
+            game.time = 10;
+        } else if (game.rounds === 3) {
+            level3Intro();
+            game.time = 10;
+        } else if (game.rounds === 4) {
+            gameover();
+        }
+        clearInterval(game.interval);
+    }
+    game.time--;
+} */
+/* const updateCountdown = function () {
+    game.countdown.text(`${game.time}`);
+    game.level.text(`Round: ${game.rounds}`)
+    if (game.time === 0) {
+        game.rounds++;
         if (game.rounds < 4) {
             game.time = 5;
         } else {
@@ -109,10 +210,10 @@ const updateCountdown = function () {
         }
     }
     game.time--;
-}
-
-$('.title').css("display", "flex");
+} */
+$('.hidden').css("display", "none")
 //event
+$(".title").on("click", ".title__start-game", levelIntro);
 $(".nav__start").on("click", start);
 $(".tiles div").on("click", refreshDisplay);
 $("#gameover").on("click", "#restart", restart)

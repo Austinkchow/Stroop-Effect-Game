@@ -15,43 +15,42 @@
     <section class="title">
         <h1 class="title__heading">Color Game</h1>
         <button class="title__difficulty">Difficulty</button>
-        <button class="title__startgame">Start</button>
+        <button class="title__start-game">Start</button>
         <button class="title__instruction">Instruction</button>
         <button class="title__credit">Credit</button>
     </section>
 
 
-    <p class="title__instruction">The famous "Stroop Effect" is named after J. Ridley Stroop who discovered this
-        strange
-        phenomenon in the 1930s. Here is your job: click the color tiles of the following words. Do NOT read the
+    <p class="title__instruction hidden">The famous "Stroop Effect" is named after J. Ridley Stroop who discovered this
+        strange phenomenon in the 1930s. Here is your job: click the color tiles of the following words. Do NOT read the
         color of the words...rather, read the words. For example, if the word "blue" is printed in a red color, you
         should click "blue". Click the colors as fast as you can. It is not as easy as you might think!
     </p>
-    <section class="round1">
+    <section class="round1 hidden">
         <h1 class="round1__heading">Round 1</h1>
         <p class="round1__instruction">Select the color tile that correlate with the word. If you get the right answer,
             you get 1 point. Otherwise, you lose 1 point.</p>
     </section>
-    <section class="round2">
-        <h1 class="round2__heading">Round 3</h1>
+    <section class="round2 hidden">
+        <h1 class="round2__heading">Round 2</h1>
         <p class="round2__instruction">Select the color tile that correlate with the word. If you get the right
             answer, you get 2 points. Otherwise, you lose 2 points.</p>
     </section>
-    <section class="round3">
-        <h1 class="round3__heading">Round 2</h1>
+    <section class="round3 hidden">
+        <h1 class="round3__heading">Round 3</h1>
         <p class="round3__instruction">Select the color tile that correlate with the word. If you get the right
             answer, you get 3 point. Otherwise, you lose 3 point.</p>
     </section>
-    <nav class="nav">
+    <nav class="nav  hidden">
         <h2 class="nav__round">Round: </h2>
         <h2 class="nav__time">Time: <span class="second">30</span><span> sec</span></h2>
         <h2 class="nav__score">Score: </h2>
         <button class="nav__start">start</button>
     </nav>
-    <section class="display">
+    <section class="display  hidden">
         <p class="display__word"></p>
     </section>
-    <section class="tiles">
+    <section class="tiles  hidden">
         <div class="tiles__red"></div>
         <div class="tiles__yellow"></div>
         <div class="tiles__blue"></div>
@@ -60,7 +59,6 @@
         <div class="tiles__green"></div>
     </section>
     <section id="gameover">
-
     </section>
 </body>
 
