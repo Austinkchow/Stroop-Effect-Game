@@ -8,10 +8,25 @@ body {
     height: 100vh;
     width: 100vw;
     text-align: center;
+    display: none;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title button {
+    height: 50px;
+    width: 150px;
+    background-color: wheat;
+    font-size: 25px;
 }
 
 .title__heading {
     font-size: 80px;
+    padding: 20px;
 }
 
 .title__instruction {
@@ -44,15 +59,18 @@ nav {
     font-size: 200px;
     font-weight: 900;
     border: solid 5px black;
-    line-height: 400px;
     text-align: center;
-    background-color: #3f3f3f;
+    background-color: whitesmoke;
+    overflow: hidden;
+}
+
+.display__word {
+    line-height: 400px;
 }
 
 .tiles {
     width: 800px;
     margin: 0 auto;
-    display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
@@ -90,4 +108,26 @@ nav {
 
 .tiles__green {
     background-color: green;
+}
+
+#gameover {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+#gameover p {
+    font-size: 40px;
+
+}
+
+#gameover #restart {
+    width: 250px;
+    height: 100px;
+
+
+
 }
