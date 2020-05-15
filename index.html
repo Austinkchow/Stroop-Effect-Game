@@ -14,48 +14,90 @@
 <body>
     <section class="title">
         <h1 class="title__heading">Color Game</h1>
-        <button class="title__difficulty">Difficulty</button>
         <button class="title__start-game">Start</button>
-        <button class="title__instruction">Instruction</button>
+        <button class="title__difficulty">Difficulty</button>
+        <button id="title__instruction">Instruction</button>
+        <button class="title__cheat-code">Cheat code</button>
         <button class="title__credit">Credit</button>
     </section>
 
-
-    <p class="title__instruction hidden">The famous "Stroop Effect" is named after J. Ridley Stroop who discovered this
-        strange phenomenon in the 1930s. Here is your job: click the color tiles of the following words. Do NOT read the
-        color of the words...rather, read the words. For example, if the word "blue" is printed in a red color, you
-        should click "blue". Click the colors as fast as you can. It is not as easy as you might think!
-    </p>
-    <section class="round1 hidden">
-        <h1 class="round1__heading">Round 1</h1>
-        <p class="round1__instruction">Select the color tile that correlate with the word. If you get the right answer,
+    <div class="modal modal-instruction modal-hidden">
+        <div class="modal__contents">
+            <p>The famous "Stroop Effect" is named after J. Ridley Stroop who
+                discovered this strange phenomenon in the 1930s. Here is your job: click the color tiles of the
+                following words. Do NOT read
+                the
+                color of the words...rather, read the words. For example, if the word "blue" is printed in a red color,
+                you
+                should click "blue". Click the colors as fast as you can. It is not as easy as you might think!
+            </p>
+        </div>
+    </div>
+    <div class="modal modal-difficulty modal-hidden">
+        <div class="modal__contents">
+            <button class="easy">Easy</button>
+            <button class="medium">Medium</button>
+            <button class="hard">Hard</button>
+        </div>
+    </div>
+    <div class="modal modal-credit modal-hidden">
+        <div class="modal__contents">
+            <p>Created by</p>
+            <a href=www.linkedin.com/in/austinkchow"">Austin Chow</a> <br>
+                <br>
+                <p>Speical Thanks to</p>
+                <p>Zhen Yu</p>
+                <p>Andrian Chow</p>
+                <p>Dalton Hart</p>
+                <p>Carson Butterfield</p>
+                <p>Jason Serafica </p>
+                <p>GA SEI SF11</p>
+        </div>
+    </div>
+    <div class="modal modal-cheat modal-hidden">
+        <div class="modal__contents modal-cheat modal-hidden">
+            <p>Please enter your code to cheat</p>
+            <form>
+                <input id="cheat-code" type="text" placeholder="Your code">
+                <button id="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <section class="round1 round hidden">
+        <h1 class="round1__heading heading">Round 1</h1>
+        <p class="round1__instruction instruction">Select the color tile that correlate with the word. If you get the
+            right answer,
             you get 1 point. Otherwise, you lose 1 point.</p>
     </section>
-    <section class="round2 hidden">
-        <h1 class="round2__heading">Round 2</h1>
-        <p class="round2__instruction">Select the color tile that correlate with the word. If you get the right
+    <section class="round2 round hidden">
+        <h1 class="round2__heading heading">Round 2</h1>
+        <p class="round2__instruction instruction">Select the color tile that correlate with the word. If you get the
+            right
             answer, you get 2 points. Otherwise, you lose 2 points.</p>
     </section>
-    <section class="round3 hidden">
-        <h1 class="round3__heading">Round 3</h1>
-        <p class="round3__instruction">Select the color tile that correlate with the word. If you get the right
+    <section class="round3 round hidden">
+        <h1 class="round3__heading heading">Round 3</h1>
+        <p class="round3__instruction instruction">Select the color tile that correlate with the word. If you get the
+            right
             answer, you get 3 point. Otherwise, you lose 3 point.</p>
     </section>
-    <nav class="nav  hidden">
-        <h2 class="nav__round">Round: </h2>
-        <h2 class="nav__time">Time: <span class="second">30</span><span> sec</span></h2>
-        <h2 class="nav__score">Score: </h2>
-    </nav>
-    <section class="display  hidden">
-        <p class="display__word"></p>
-    </section>
-    <section class="tiles  hidden">
-        <div class="tiles__red"></div>
-        <div class="tiles__yellow"></div>
-        <div class="tiles__blue"></div>
-        <div class="tiles__purple"></div>
-        <div class="tiles__orange"></div>
-        <div class="tiles__green"></div>
+    <div class="game">
+        <nav class="nav  hidden">
+            <h2 class="nav__round">Round: </h2>
+            <h2 class="nav__time">Time: <span class="second">30</span><span> sec</span></h2>
+            <h2 class="nav__score">Score: </h2>
+        </nav>
+        <section class="display  hidden">
+            <p class="display__word"></p>
+        </section>
+        <section class="tiles  hidden">
+            <div class="tiles__red"></div>
+            <div class="tiles__yellow"></div>
+            <div class="tiles__blue"></div>
+            <div class="tiles__purple"></div>
+            <div class="tiles__orange"></div>
+            <div class="tiles__green"></div>
+    </div>
     </section>
     <section id="gameover">
     </section>
