@@ -53,7 +53,12 @@ const checkCode = function () {
         game.colorsNum = 1;
     }
 }
+const generateTiles = function () {
+    for (let i = 0; i < game.colorsNum; i++) {
+        $(".tiles").append(`<div class="tiles__${game.words[i]}"></div>`)
 
+    }
+}
 //Game function
 const refreshDisplay = function (event) {
     let $class = $(event.target).attr("class").substring(7);
@@ -144,25 +149,26 @@ const levelIntro = function () {
         $('.round1').css("display", "flex");
         setTimeout(level, 4000);
     } else if (game.rounds === 2) {
-        $('.nav,.display,.tiles,.round1').css("display", "none");
+        $('.game').css("display", "none");
         $('.round2').css("display", "flex");
         setTimeout(level, 4000);
     } else if (game.rounds === 3) {
-        $('.nav,.display,.tiles,.round2').css("display", "none");
+        $('.game').css("display", "none");
         $('.round3').css("display", "flex");
         setTimeout(level, 4000);
     }
 }
 const level = function () {
     if (game.rounds === 1) {
-        $('.game').css("display", "block")
         $('.round1').css("display", "none");
+        generateTiles();
     } else if (game.rounds === 2) {
         $('.round2').css("display", "none");
     } else if (game.rounds === 3) {
         $('.round3').css("display", "none");
     }
-    $(".nav,.tiles").css("display", "flex");
+    $(".game").css("display", "flex");
+    $(".tiles").css("display", "flex");
     $(".display").css("display", "block");
     updateCountdown();
     generateWord();
@@ -171,12 +177,15 @@ const level = function () {
 
 //Gameover
 const gameover = function () {
-    $(".game").css("display", "none")
+    $(".tiles").empty();
+    $(".game").css("display", "none");
     $('#gameover').append(`<p>Gameover!  <br>Score: ${game.points}</p>`);
     $('#gameover').append('<button id="restart">Restart</button>');
+    $("#gameover").css("display", "flex");
 }
 //restart button
 const restart = function () {
+    $("#gameover").css("display", "none");
     $(".title").css("display", "flex");
     $('#gameover').empty();
     game.points = 0;
@@ -206,5 +215,5 @@ $('.title__cheat-code').on("click", cheat);
 $('.modal-cheat .modal__contents').on("blur", cheatOff);
 $('#submit').on('click', checkCode)
 
-$(".tiles div").on("click", refreshDisplay);
+$(".tiles").on("click", "div", refreshDisplay);
 $("#gameover").on("click", "#restart", restart)
