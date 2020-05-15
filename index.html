@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Color Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Sigmar+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-3.1.1.js"
         integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous" defer></script>
@@ -13,7 +14,7 @@
 
 <body>
     <section class="title">
-        <h1 class="title__heading">Color Game</h1>
+        <div class="title__heading">Color Game</div>
         <button class="title__start-game">Start</button>
         <button class="title__difficulty">Difficulty</button>
         <button id="title__instruction">Instruction</button>
@@ -34,9 +35,9 @@
     </div>
     <div class="modal modal-difficulty modal-hidden">
         <div class="modal__contents">
-            <button class="easy">Easy</button>
-            <button class="medium">Medium</button>
-            <button class="hard">Hard</button>
+            <button class="easy difficulty__button">Easy</button>
+            <button class="medium difficulty__button">Medium</button>
+            <button class="hard difficulty__button">Hard</button>
         </div>
     </div>
     <div class="modal modal-credit modal-hidden">
@@ -56,10 +57,8 @@
     <div class="modal modal-cheat modal-hidden">
         <div class="modal__contents modal-cheat modal-hidden">
             <p>Please enter your code to cheat</p>
-            <form>
-                <input id="cheat-code" type="text" placeholder="Your code">
-                <button id="submit">Submit</button>
-            </form>
+            <input id="cheat-code" type="text" placeholder="Your code">
+            <button id="submit">Submit</button>
         </div>
     </div>
     <section class="round1 round hidden">

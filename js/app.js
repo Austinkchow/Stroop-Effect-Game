@@ -9,7 +9,13 @@ const game = {
     level: $('.nav__round'),
     gameover: $('#gameover span'),
     interval: null,
-    input: ""
+    input: "",
+    cheat: "off"
+}
+const changeColor = function (event) {
+    console.log(event.offsetX);
+    console.log(event.offsetY);
+    $('.title__heading').css("color", `rgb(${event.offsetX},${event.offsetY},100)`);
 }
 const difficulty = function () {
     $(".modal-difficulty").removeClass("modal-hidden")
@@ -48,22 +54,23 @@ const hard = function () {
     difficultyOff();
 }
 const checkCode = function () {
-    console.log($("input").val())
-    if ($("input").val() === "a") {
-        game.colorsNum = 1;
+    if ($("#cheat-code").val() === "GA") {
+        game.cheat = "on"
     }
+    cheatOff();
 }
+
 const generateTiles = function () {
     for (let i = 0; i < game.colorsNum; i++) {
         $(".tiles").append(`<div class="tiles__${game.words[i]}"></div>`)
-
     }
 }
+
 //Game function
 const refreshDisplay = function (event) {
     let $class = $(event.target).attr("class").substring(7);
     let $display = $(".display__word").text();
-    if ($class === $display) {
+    if ($class === $display || game.cheat === "on") {
         addPoints();
     } else {
         minusPoints()
@@ -191,10 +198,12 @@ const restart = function () {
     game.points = 0;
     game.rounds = 1;
     game.time = 15;
+    game.cheat = "off";
 }
 
 $('.hidden').css("display", "none")
 //event
+$(".title__heading").on("mousemove", changeColor);
 $(".title__start-game").on("click", levelIntro);
 
 $('.title__difficulty').on("click", difficulty);
@@ -203,7 +212,6 @@ $('.modal-difficulty .modal__contents').on("blur", difficultyOff);
 $('.easy').on("click", easy);
 $('.medium').on("click", medium);
 $('.hard').on("click", hard);
-
 
 $('#title__instruction').on("click", instruction);
 $('#title__instruction').on("blur", instructionOff);
