@@ -13,37 +13,33 @@
 </head>
 
 <body>
-    <section class="title">
+    <section class="title hidden">
         <div class="title__heading">Color Game</div>
         <button class="title__start-game">Start</button>
         <button class="title__difficulty">Difficulty</button>
-        <button id="title__instruction">Instruction</button>
+        <button class="title__instruction">Instruction</button>
         <button class="title__cheat-code">Cheat code</button>
         <button class="title__credit">Credit</button>
     </section>
-
-    <div class="modal modal-instruction modal-hidden">
-        <div class="modal__contents">
-            <p>In psychology, the Stroop effect is a demonstration of cognitive interference where a delay in the
-                reaction time of a
-                task occurs due to a mismatch in stimuli.
-            </p>
-            <p>Click the color tiles that correlates with the displayed word.
-            </p>
-            <p>points will be added if correct; otherwise points will be deducted.</p>
+    <section>
+        <div class="modal modal-instruction modal-hidden">
+            <div class="modal__contents modal__construction-detail">
+                <p>Click the color tiles that correlates with the displayed word.
+                </p>
+                <p>points will be added if correct; otherwise points will be deducted.</p>
+            </div>
         </div>
-    </div>
-    <div class="modal modal-difficulty modal-hidden">
-        <div class="modal__contents">
-            <button class="easy difficulty__button">Easy</button>
-            <button class="medium difficulty__button">Medium</button>
-            <button class="hard difficulty__button">Hard</button>
+        <div class="modal modal-difficulty modal-hidden">
+            <div class="modal__contents">
+                <button class="easy difficulty__button">Easy</button>
+                <button class="medium difficulty__button">Medium</button>
+                <button class="hard difficulty__button">Hard</button>
+            </div>
         </div>
-    </div>
-    <div class="modal modal-credit modal-hidden">
-        <div class="modal__contents">
-            <p>Created by</p>
-            <a href=www.linkedin.com/in/austinkchow"">Austin Chow</a> <br>
+        <div class="modal modal-credit modal-hidden">
+            <div class="modal__contents">
+                <p>Created by</p>
+                <a href="www.linkedin.com/in/austinkchow">Austin Chow</a> <br>
                 <br>
                 <p>Speical Thanks to</p>
                 <p>Zhen Yu</p>
@@ -52,28 +48,21 @@
                 <p>Carson Butterfield</p>
                 <p>Jason Serafica </p>
                 <p>GA SEI SF11</p>
+            </div>
         </div>
-    </div>
-    <div class="modal modal-cheat modal-hidden">
-        <div class="modal__contents modal-cheat modal-hidden">
-            <p>Please enter your code to cheat</p>
-            <input id="cheat-code" type="text" placeholder="Your code">
-            <button id="submit">Submit</button>
+        <div class="modal modal-cheat modal-hidden">
+            <div class="modal__contents modal-cheat modal-hidden">
+                <p>Please enter your code to cheat</p>
+                <input id="cheat-code" type="text" placeholder="Your code">
+                <button id="submit">Submit</button>
+            </div>
         </div>
-    </div>
-    <section class="round1 round hidden">
-        <h1 class="round1__heading heading">Round 1</h1>
-        <p class="round1__instruction instruction">1 point each</p>
     </section>
-    <section class="round2 round hidden">
-        <h1 class="round2__heading heading">Round 2</h1>
-        <p class="round2__instruction instruction">2 points each</p>
+    <section class="round-intro hidden">
+        <h1 class="round__heading heading">Round <span></span></h1>
+        <p class="round__instruction instruction"><span></span> point each</p>
     </section>
-    <section class="round3 round hidden">
-        <h1 class="round3__heading heading">Round 3</h1>
-        <p class="round3__instruction instruction">3 points each</p>
-    </section>
-    <div class="game hidden">
+    <section class="game hidden">
         <nav class="nav">
             <h2 class="nav__round">Round: </h2>
             <h2 class="nav__time">Time: <span class="second"></span><span> sec</span></h2>
@@ -84,7 +73,7 @@
         </section>
         <section class="tiles">
         </section>
-    </div>
+    </section>
     <section id="gameover" class="hidden">
     </section>
 </body>

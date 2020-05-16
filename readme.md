@@ -18,6 +18,12 @@ answer buttons have a class, so it can compare the color.
 change html's word and css style when the answer button is click.
 
 
+/Users/austinchow/Desktop/Screen Shot 2020-05-12 at 3.38.34 PM.png
+/Users/austinchow/Desktop/Screen Shot 2020-05-12 at 2.01.20 PM.png
+/Users/austinchow/Desktop/Screen Shot 2020-05-11 at 9.39.28 AM.png
+/Users/austinchow/Desktop/Screen Shot 2020-05-08 at 10.19.37 AM.png
+/Users/austinchow/Desktop/Screen Shot 2020-05-04 at 9.05.01 PM.png
+/Users/austinchow/Desktop/Screen Shot 2020-05-04 at 9.04.35 PM.png
 
 
 
