@@ -35,6 +35,7 @@ const textChange = function () {
     randomNum = generateRandomNum();
     game.word.text(game.words[randomNum]);
     game.word.css("color", game.words[randomNum]);
+    game.word.css("background-color", "black")
 }
 const textColorChange = function () {
     randomNum2 = generateRandomNum();
@@ -70,17 +71,20 @@ const updateCountdown = function () {
 }
 //==========Phrases Setup=============
 const levelIntro = function () {
-    $('.round-intro span').text(game.rounds)
+    $('.round-intro span').text(game.rounds);
     if (game.rounds === 1) {
         $('.title').css("display", "none");
+        $('.round-intro p').text(`${game.rounds} point each`);
         $('.round-intro').css("display", "flex");
         setTimeout(level, 2000);
     } else if (game.rounds === 2) {
         $('.game').css("display", "none");
+        $('.round-intro p').text(`${game.rounds} points each`);
         $('.round-intro').css("display", "flex");
         setTimeout(level, 2000);
     } else if (game.rounds === 3) {
         $('.game').css("display", "none");
+        $('.round-intro p').text(`${game.rounds} points each`);
         $('.round-intro').css("display", "flex");
         setTimeout(level, 2000);
     }
@@ -139,7 +143,7 @@ const choseDifficulty = function () {
     modalOff();
 }
 const checkCode = function () {
-    if ($("#cheat-code").val() === "GA") {
+    if ($("#cheat-code").val() === "Austin") {
         game.cheat = "on"
     }
     modalOff();
@@ -161,7 +165,7 @@ const restart = function () {
     $('#gameover').empty();
     game.points = 0;
     game.rounds = 1;
-    game.time = 5;
+    game.time = 15;
     game.cheat = "off";
 }
 //========events=========

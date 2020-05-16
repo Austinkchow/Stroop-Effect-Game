@@ -14,7 +14,6 @@ body {
         cursive;
 }
 
-
 .title {
     height: 100vh;
     display: flex;
@@ -29,16 +28,19 @@ body {
     width: 190px;
     background-color: #bdc3c7;
     font-size: 25px;
+    font-family: 'Luckiest Guy',
+        cursive;
     cursor: pointer;
     margin: 10px;
-    border-radius: 5px;
-    transition: all 0.3s ease-in;
+    border-radius: 13px;
+    transition: all 0.1s ease-in-out;
 }
 
 .title button:hover,
 #restart:hover {
     background-color: #ecf0f1;
     transform: scale(1.2);
+    color: rgb(231, 71, 125)
 }
 
 
@@ -65,13 +67,13 @@ body {
 }
 
 .modal__contents {
-    background: rgb(215, 207, 211);
-    background: radial-gradient(circle, #ecf0f1 0%, #7f8c8d 100%);
+    background: radial-gradient(circle, #fffbfb 0%, #000000ed 90%);
     padding: 2rem 4rem;
     display: flex;
     flex-direction: column;
     max-width: 70%;
-    ;
+    border-radius: 30px;
+
 }
 
 .modal__contents a {
@@ -94,22 +96,24 @@ body {
 #submit {
     width: 100%;
     padding: .5rem;
-    background-color: #34495e;
+    background-color: #1e2831;
     border: none;
     color: rgb(255, 255, 255);
     font-size: 20px;
     cursor: pointer;
+    border-radius: 10px;
 }
 
 .modal__contents .difficulty__button {
     width: 300px;
     padding: 10px;
     margin: 9px;
-    background-color: #34495e;
+    background-color: #1e2831;
     border: none;
     color: rgb(255, 255, 255);
     font-size: 20px;
     cursor: pointer;
+    border-radius: 10px;
 }
 
 .modal__contents button:hover {
@@ -155,10 +159,9 @@ nav {
 
 .display {
     width: 800px;
-    height: 400px;
+    height: 350px;
     margin: 0 auto;
     font-size: 200px;
-    font-weight: 900;
     text-align: center;
     overflow: hidden;
     border-radius: 20px;
@@ -256,4 +259,94 @@ nav {
     color: white;
     font-size: 40px;
 
+}
+
+@media(max-width: 400px) {
+    .title__heading {
+        font-size: 100px;
+        padding: 5px;
+    }
+
+    .display {
+        width: 350px;
+        height: 150px;
+        font-size: 80px;
+    }
+
+    .modal {
+        max-height: 600px;
+        max-width: 600px;
+    }
+
+    .modal__contents {
+        max-width: 300px;
+    }
+
+    .modal__contents a {
+        font-size: 20px;
+    }
+
+    .modal__contents p {
+        font-size: 20px;
+    }
+
+    .modal__contents input[type=text] {
+        width: 100%;
+        padding: .5rem;
+    }
+
+    nav {
+        width: 100%;
+        font-size: 15px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .nav__round {
+        width: 100%;
+        font-size: 30px;
+        padding: 20px;
+    }
+
+    .round-intro .heading {
+        font-size: 60px;
+        padding: 40px;
+    }
+
+    .round-intro .instruction {
+        font-size: 30px;
+    }
+
+    .game {
+        height: 70%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .display {
+        width: 100%;
+        height: 27%;
+        margin: 15px 0 40px 0;
+    }
+
+    .display__word {
+        line-height: 162px;
+        font-size: 80px;
+    }
+
+    .tiles {
+        width: 100%;
+    }
+
+    .tiles div {
+        width: 45%;
+        height: 120%;
+        margin: 5px;
+    }
+
+    #gameover p {
+        margin-bottom: 20px;
+    }
 }
