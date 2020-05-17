@@ -288,7 +288,7 @@ nav {
     }
 
     .modal {
-        max-height: 600px;
+        max-height: 500px;
         max-width: 350px;
 
     }
@@ -341,7 +341,7 @@ nav {
     }
 
     .game {
-        height: 100%;
+        height: 500px;
         width: 100%;
         display: flex;
         flex-direction: column;
