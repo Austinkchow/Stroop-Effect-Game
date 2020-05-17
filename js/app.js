@@ -171,7 +171,8 @@ const restart = function () {
 //========events=========
 $(".title__heading").on("mousemove", changeColor);
 $('.title button').on("click", buttonFunction)
-$('.modal__contents').on("mouseleave", modalOff);
+//$('.modal__contents').on("mouseleave", modalOff);
+$('.close').on("click", modalOff);
 $('.difficulty__button').on('click', choseDifficulty)
 $('#submit').on('click', checkCode)
 $(".tiles").on("click", "div", refreshDisplay);

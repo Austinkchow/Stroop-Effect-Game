@@ -12,6 +12,7 @@ body {
     background-color: black;
     font-family: 'Luckiest Guy',
         cursive;
+
 }
 
 .title {
@@ -52,6 +53,7 @@ body {
 
 
 .modal {
+    margin: 0 auto;
     background-color: rgb(0, 0, 0, 0.5);
     position: absolute;
     top: 0;
@@ -74,6 +76,18 @@ body {
     max-width: 70%;
     border-radius: 30px;
 
+}
+
+.close {
+    color: rgb(27, 26, 26);
+    font-size: 20px;
+    align-self: flex-end;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: rgb(95, 25, 25)
 }
 
 .modal__contents a {
@@ -275,11 +289,13 @@ nav {
 
     .modal {
         max-height: 600px;
-        max-width: 600px;
+        max-width: 350px;
+
     }
 
     .modal__contents {
-        max-width: 300px;
+        max-width: 350px;
+
     }
 
     .modal__contents a {
@@ -288,6 +304,13 @@ nav {
 
     .modal__contents p {
         font-size: 20px;
+    }
+
+    .modal__contents .difficulty__button {
+        width: 200px;
+        height: 60px;
+        font-size: 25px;
+        text-transform: uppercase;
     }
 
     .modal__contents input[type=text] {
@@ -318,7 +341,7 @@ nav {
     }
 
     .game {
-        height: 70%;
+        height: 100%;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -341,8 +364,8 @@ nav {
     }
 
     .tiles div {
-        width: 45%;
-        height: 120%;
+        width: 160px;
+        height: 60px;
         margin: 5px;
     }
 
