@@ -1,38 +1,30 @@
-Game Title: Matching Colors
-Instruction: Player needs to match the color correlate with the word. 
 
-// == User Stories/game logic == //
-
-//When the user clicks begin, the timer should start and the rectangle should general a word with different color.
-//a start button: game starts when button is clicked, after that the button disappear.
-//timer: 30 sec per round.
-//combination 6 colors, 6 words.
-//When user click on the color, the rectangle appears another word.
-//When time is up, the game is over.
-//once the game is over show score.
-
-create a array with color words.
-create a array with colors.
-randomized both word and color.
-answer buttons have a class, so it can compare the color. 
-change html's word and css style when the answer button is click.
-
-
-/Users/austinchow/Desktop/Screen Shot 2020-05-12 at 3.38.34 PM.png
-/Users/austinchow/Desktop/Screen Shot 2020-05-12 at 2.01.20 PM.png
-/Users/austinchow/Desktop/Screen Shot 2020-05-11 at 9.39.28 AM.png
-/Users/austinchow/Desktop/Screen Shot 2020-05-08 at 10.19.37 AM.png
-/Users/austinchow/Desktop/Screen Shot 2020-05-04 at 9.05.01 PM.png
-/Users/austinchow/Desktop/Screen Shot 2020-05-04 at 9.04.35 PM.png
-
-
-
-
-
-
-extra:
-3 rounds
-1st round: words with black font color, 1 points for each right answer.
-2nd round words with different font color, 2 points for each right answer.
-3rd round: words with different font color and background color, 3 points for each right answer.
-
+Color Game - User Stories
+ 
+Game Idea:   
+This game is created based on Stroop Effect. In psychology, the Stroop effect is a demonstration of cognitive interference where a delay in the reaction time of a task occurs due to a mismatch in stimuli.
+ 
+How to play:
+The player is selecting color tile that correlates with the word that is displayed. 
+ 
+Main game story:
+ 
+Starting page:
+Game name: “Color Game”
+Buttons: “Start”, ”Difficulty”, ”Instruction”, ”Cheat Code”, ”Credit”.
+*Start button: entering the game.
+*Difficulty button: selecting number of tiles. Easy: 2 tiles; Medium: 4 tiles; Hard: 6 tiles.
+*Cheat code button: entering a right code will disregard the game rule, points will be added even if the player selects the wrong button.
+Credit button: crediting developer and the people who helped.
+ 
+ 
+Game pages
+Prior to each round, there will be an intro page showing the round number and game points for the following round.
+Round 1: Displayed word is matched with color. 1 point each.
+Round 2: Displayed word has different color. 2 points each.
+Round 3: Display Word has different color and background color. 3points each.
+ 
+Ending page:
+Contents: Gameover, score, and restart button:
+*Score: final score number.
+*Restart button: go back to the main page.
