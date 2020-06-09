@@ -1,12 +1,12 @@
 # Color Game - User Stories
 
-### Game Idea:
+## Game Idea:
 This game is created based on Stroop Effect. In psychology, the Stroop effect is a demonstration of cognitive interference where a delay in the reaction time of a task occurs due to a mismatch in stimuli.
 
-### How to play:
+## How to play:
 The player is selecting color tile that correlates with the word that is displayed. 
 
-### Main game story:
+## Main game story:
 
 ### Starting page:
 Game name: “Color Game”
